@@ -2,6 +2,8 @@ package reservaDePassagens;
 
 import java.util.*;
 
+/*Autor: Paula Graziela Militão Valadares*/
+
 public class ReservaPassagem {
 	private static ArrayList<Usuario> passageiro= new ArrayList<>();
 	private static ArrayList<Passagem> passagem= new ArrayList<>();
