@@ -121,15 +121,16 @@ public class ReservaPassagem {
 					System.out.println("Digite o local de origem:");
 					String dest = lerString();
 					
-
 					Rota rota = buscarRota(origem,dest);
 					Usuario user = buscarUsuario(CPF);
+					
 					if(user!=null && rota!=null) {
 						int passagemJaCadastra = 0;
 						for(Passagem passagem : this.passagem) {
 							if(passagem.getPassageiro() == user)
 								passagemJaCadastra = 1;
 						}
+						
 						if(passagemJaCadastra == 0 && rota.getNumeroPoltronas()>0) {
 							Passagem pass = new Passagem();
 							pass.setPassageiro(user);
@@ -161,6 +162,7 @@ public class ReservaPassagem {
 				else {
 					System.out.println("Opção Inválida.");		
 				}
+				
 				break;
 			case 2:
 				System.out.println("Digite seu CPF:");
@@ -173,6 +175,7 @@ public class ReservaPassagem {
 				String dest = lerString();
 				
 				Passagem pass = buscarPassagem(origem, dest, CPF);
+				
 				if(pass!=null) {
 					passagem.remove(pass);
 					pass.getRota().setNumeroPoltronas(pass.getRota().getNumeroPoltronas()+1);
@@ -182,11 +185,13 @@ public class ReservaPassagem {
 				else
 					System.out.println("Passagem não encontrada! Tente novamente.");
 				menu();
+				
 				break;
 			case 3:
 				Usuario user = cadastrarUser();
 				System.out.println(user.getNome() + " cadastrado (a) com sucesso!\n");
 				menu();
+				
 				break;
 			case 4:
 				Rota rota = cadastrarRotas();
@@ -194,6 +199,7 @@ public class ReservaPassagem {
 						+rota.getDestino()+" as "+rota.getHoraVoo()+" no dia "+rota.getDataVoo()+""
 						+ " cadastrada com sucesso!\n");
 				menu();
+				
 				break;
 			case 5:
 				if(this.rota.size()>0) {
@@ -208,9 +214,11 @@ public class ReservaPassagem {
 				break;
 			case 0:
                 System.exit(0);
+                
 				break;
 			default:
 				System.out.println("Opção Inválida!");
+				
 				break;
 			}
 			

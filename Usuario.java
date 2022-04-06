@@ -9,7 +9,6 @@ public class Usuario {
 	public Usuario() {
 		System.out.println("Digite seu nome:");
         this.nome = lerString();
-        
 
 		System.out.println("Digite seu CPF:");
         this.CPF = lerString();
