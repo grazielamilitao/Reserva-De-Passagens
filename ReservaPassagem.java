@@ -221,7 +221,7 @@ public class ReservaPassagem {
 				break;
 			}
 			
-		} while(opcao!=0 || opcao<0 || opcao>2);
+		} while(opcao!=0 || opcao<0 || opcao>5);
 		
 	}
 
