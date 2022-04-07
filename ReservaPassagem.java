@@ -94,7 +94,6 @@ public class ReservaPassagem {
 		int opcao = 0;
 		
 		do {
-			Scanner sc = new Scanner(System.in);
 			System.out.println("----------------- Menu -----------------");
 			System.out.println("Escolha uma opção:");
 			System.out.println("1 - Reservar passagem");
@@ -104,7 +103,7 @@ public class ReservaPassagem {
 			System.out.println("5 - Visualizar Rotas");
 			System.out.println("0 - Sair");
 			
-			opcao = sc.nextInt();
+			opcao = lerInt();
 			
 			switch (opcao) {
 			case 1:
