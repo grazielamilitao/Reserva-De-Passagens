@@ -5,5 +5,5 @@
 This project using Java SE 8 and was developed thinking about facilitating the reservation and cancellation of airline tickets, providing consultation of available flight routes and registration of users.
 
 The main features offered are:
-As a non-registered user, you can create a user profile with name and CPF and also view routes.
+As a non-registered user, you can view routes and also create a user profile with name and CPF.
 As a registered user, view available routes, book a route and cancel a reservation.
